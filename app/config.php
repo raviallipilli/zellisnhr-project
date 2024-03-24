@@ -10,7 +10,7 @@ date_default_timezone_set('Europe/London');
 // server configurations
 switch($_SERVER['SERVER_NAME'])
 {
-	case 'zellis.localhost':
+	case 'zellisnhr.localhost':
 		DEFINE('DB_HOST', 'localhost');
 		DEFINE('DB_USERNAME', 'root');
 		DEFINE('DB_PASSWORD', '');
