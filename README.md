@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------------------------
 
 # Author - Ravi Allipilli
-# Project - ZELLIS - A simple Login and Registration system with ability to upload files  
+# Project - A simple Login and Registration system with ability to upload files  
 # php version - 7.3.29
 # frameworks - Slim framework with Vanilla Php 
 
