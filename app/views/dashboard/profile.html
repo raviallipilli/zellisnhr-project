@@ -1,0 +1,23 @@
+<h1>User - profile</h1>
+
+<div class="row">
+    <section class="quarter">
+    	<div class="box-border">
+    		<h2>Info</h2>
+            <ul class="nobullets">
+            	<li>Created: <?php echo format_date($data['createdate'], "d F Y") ?></li>
+            	<li>Update: <?php echo format_date($data['updatedate'], "d F Y") ?></li>
+            </ul>
+        </div>
+    </section>
+    <section class="threequarters">
+    	<div class="box-border">
+    		<h2><?php echo $data['firstname']." ".$data['lastname']?></h2>
+	        <form action="<?php echo PAGE_URL_EDIT?>" method="post" name="edit" class="modal_edit" enctype='multipart/form-data'>
+	            <input type="hidden" name="do" value="edit">
+	            <?php echo $render->Render_form();?>
+	        </form>
+			<a href="/dashboard/users" class="button">Go Back</a>
+	    </div>
+    </section>
+</div>

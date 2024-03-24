@@ -1,0 +1,33 @@
+<h1> Edit User</h1>
+<?php 
+		if ($status=='updated'){
+		echo "<div class='alert alert-success'><strong id='message'>Saved Successfully!</strong></div>"; 
+		}
+	?>
+<div class="row">
+	<div class="twothirds">
+		<div class="box">
+			<h2>Edit User</h2>
+			<form action="<?php echo PAGE_URL_EDIT.$user_id?>" method="post" name="edit" enctype='multipart/form-data' id="dashboard-form" class="form-validate">
+				<input type="hidden" name="do" value="edit">
+
+				<?php echo $render->Render_form();?>
+
+				<div class="submit_but">
+					<button type="submit" id="submit" class="btn btn-primary btn-sm">Save</button>
+					<button type="submit" id="submit_update_close" name="update_close" class="update_close btn btn-primary btn-sm">Update & Close</button>
+					<a href="/dashboard/user-files" class="button-cancel">Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="onethird">
+		<div class="box colour">
+			<h2>LAST UPDATED</h2>
+			<ul class="nobullets">
+				<li>Created: <?php echo format_date($data['createdate'], "d F Y") ?></li>
+				<li>Update: <?php echo format_date($data['updatedate'], "d F Y") ?></li>
+			</ul>
+		</div>
+	</div>
+</div>

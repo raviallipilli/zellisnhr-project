@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Zellis</title>
+		<!--CSS FILES-->
+		<link rel="stylesheet" type="text/css" href="<?php echo RESOURCES_CSS; ?>/dashboard/dashboard.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo RESOURCES_CSS; ?>/dashboard/styles.min.css?v=<?php echo date('YmdHis')?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo RESOURCES_CSS; ?>/dashboard/main.css?v=<?php echo date('YmdHis')?>">
+		<!--JS FILES-->
+		<script src="https://use.fontawesome.com/1c2b253775.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="<?php echo RESOURCES_JS; ?>/dashboard/dashboard.js"></script>
+	</head>
+	<body style="background-color:lightyellow">
+		<header class="cf">
+			<?php 
+			if($_SESSION['is_logged_in'])
+			{
+			?>	
+					<h3>Good<?php echo (date('A') == "AM") ? " Morning! " : (date('H') > 18) ? " Evening! " : " Afternoon! " ; echo date('jS F, l'); ?></h3>
+			<?php } 
+			?>
+			<ul>
+				<?php 
+				if($_SESSION['is_logged_in'])
+				{
+				?>				
+					<li>
+						<i class="fa fa-address-card" aria-hidden="true"></i><a href="/dashboard/profile"><?php echo $_SESSION['login_firstname']?>'s Profile</a>
+					</li>
+					<li>
+						<i class="fa fa-clock-o" aria-hidden="true"></i><a href="/dashboard/login/logout">Logout</a>
+					</li>
+				<?php 
+				} else {
+				?>
+					<li>
+						<i class="fa fa-user" aria-hidden="true"></i><a href="/dashboard/login/login">Login</a>
+					</li>
+				<?php } 
+				?>
+			</ul>
+		</header>
+		<div class="table-wrap">
+			<div class="table-row-wrap">
+				<?php 
+				if($_SESSION['is_logged_in'])
+				{
+				?>
+					<nav>
+						<ul>
+							<li class="loggedin-profile">
+								<i class="fa fa-user"></i>Welcome <?php echo $_SESSION['login_firstname']?>
+							</li>
+							<li>
+								<a <?php echo ($page_name == "users") ? "class='active'" : null?> href="/dashboard/users"><i class="fa fa-user-plus" aria-hidden="true"></i> USERS</a>
+							</li>
+							<li>
+								<a <?php echo ($page_name == "user-files") ? "class='active'" : null?> href="/dashboard/user-files"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>	USER DOCUMENTS</a>
+							</li>
+						</ul>
+					</nav>
+				<?php } 
+				?>
+				<main>
+					<?php require_once($view)?>
+				</main>
+			</div>
+		</div>
+	</body>
+</html>

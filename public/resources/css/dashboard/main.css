@@ -1,0 +1,102 @@
+nav {
+    background-color: #666;
+    }
+    label[for=label-file] {
+        font-size: small;
+    }
+    .fa-trash {
+        margin-left: 223px;
+        padding: 5px;
+        color: red;
+        font-size: x-large!important;
+    }
+    header .logo {
+            height: 40px;
+            width: 200px;
+        }
+    button, a.button:link, a.button:visited, a.button:hover, a.button:active {
+        display: inline-block;
+        background-color: darkblue;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    button:hover, a.button:hover, a.button:active {
+        background-color: #666;
+    }
+    button-delete, a.button-delete:link, a.button-delete:visited, a.button-delete:hover, a.button-delete:active {
+        display: inline-block;
+        background-color: red;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    button-delete:hover, a.button-delete:hover, a.button-delete:active {
+        background-color: #666;
+    }
+    button-cancel, a.button-cancel:link, a.button-cancel:visited, a.button-cancel:hover, a.button-cancel:active {
+        display: inline-block;
+        background-color: mediumseagreen;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    button-cancel:hover, a.button-cancel:hover, a.button-cancel:active {
+        background-color: #666;
+    }
+    nav a.active {
+        border-left-color: #cada35!important;
+        background-color: #5c5c5c!important;
+    }
+    nav .subnav a:link, nav a:visited, nav a:hover, nav a:active {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 16px 20px 16px 40px;
+        transition: all .5s ease;
+        border-left: 4px solid #666;
+    }
+    nav>ul>li>a, nav>ul>li>a.active {
+        border-top: 0px solid #666; 
+        border-bottom: 0px solid #666; 
+    }
+    nav>ul, nav ul li.loggedin-profile {
+        border-bottom: 0px #666;
+    }
+    nav .subnav a:hover, nav a:active {
+        border-left-color: #cada35;
+    }
+    nav ul a:active, nav ul a:hover {
+        background-color: #666;
+    }
+    main table.table tr:nth-of-type(odd) td {
+        background-color: ghostwhite; 
+        padding: 6px 6px;
+    }
+    main table.table td, main table.table th {
+        padding: 6px 6px;
+    }
+
+    .box.colour {
+        background-color: #666!important;
+        color: #fff;
+    }
+    .file-download {
+        font-size:medium!important;
+        color:darkmagento!important;
+    }

@@ -1,0 +1,27 @@
+<h2>Login Page</h2>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous'>
+
+<div class='col-md-4 offset-md-4'>
+
+<form autocomplete="false" method="post" action="/dashboard/login/login" class="form-group">
+
+  <div class="text-center">
+    <img src="<?php echo RESOURCES_IMAGES; ?>/img_avatar.png" class="img-fluid" alt="">
+  </div>
+  <div class='form-group'>
+  <label for="username"><b>Username</b></label>
+    <input type='text' class='form-control' aria-describedby='emailHelp' placeholder='Enter Username' name="email">
+  </div>
+  <div class='form-group'>
+  <label for="password"><b>Password</b></label>
+    <input type='password' class='form-control' placeholder='Enter Password' name="password">
+  </div>
+  <div class="form-group">
+    <button type='submit' class='btn btn-primary' name="submit">Login</button>
+  </div>
+  <div class="form-group">
+    Not registered yet? <a href="/dashboard/register">Sign up</a>
+  </div>
+ 
+</form>
+</div>

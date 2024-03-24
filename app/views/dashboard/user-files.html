@@ -1,0 +1,44 @@
+<h1>Files</h1>
+<?php 
+		if ($status=='deleted'){
+		echo "<div class='alert alert-success'><strong id='message'>Deleted Successfully!</strong></div>"; 
+		}
+?>
+<div class="add-new">
+	<a class="button" href="<?php echo PAGE_URL_EDIT?>0" role="button">Add New</a>
+</div> 
+
+<div class="table-wrapper-scroll-y tablescroll-custom-scrollbar" style="width: 100%;height: 600px;">
+
+		<table id="tablesorter" class="table table-bordered table-striped mb-0">
+	<thead>
+		<tr>
+			<th scope="col">Title</th>
+			<th scope="col">Filename</th>
+			<th scope="col">Date Created</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php 
+	if($data_count > 0)
+	{
+		$i = 0;
+		foreach($data as $item)
+		{
+		?>
+		<tr class="table-info">		
+			<td data-th="Name:"><?php echo $item['title']?></td>						
+			<td data-th="Filename"><a class="btn btn-primary btn-lg active" role="button" target="_blank" href='/<?php echo FILES_STORE_ATTACHMENTS.'/'.$item['original_filename']?>'><?php echo $item['original_filename']?></a></td>
+			<td data-th="Date Created"><?php echo format_date($item['createdate'], 'd/m/Y h:i A')?></a></td>
+			<td data-th="" class="buttons">
+				<a href="<?php echo PAGE_URL_EDIT.$item['id']?>" title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+			</td>
+		</tr>
+		<?php 
+			$i++;
+		}
+	}
+	?>
+	</tbody>
+</table>
+</div>

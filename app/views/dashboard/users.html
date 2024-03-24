@@ -1,0 +1,36 @@
+<h1>Users</h1>
+
+<table id="tablesorter" class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th class="filter-false">Telephone</th>
+			<th scope="col">Created On</th>
+			<th class="filter-false">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php 
+	if($data_count > 0)
+	{
+		$i = 0;
+		foreach($data as $item)
+		{
+		?>
+		<tr>								
+			<td data-th="Name:"><?php echo $item['firstname']?> <?php echo $item['lastname']?></td>
+			<td data-th="Email:"><?php echo $item['email']?></td>
+			<td data-th="Telephone:"><?php echo $item['telephone']?></td>
+			<td data-th="Created On"><?php echo format_date($item['createdate'], 'd/m/Y h:i A')?></a></td>
+			<td data-th="" class="buttons">
+				<a href="<?php echo PAGE_URL_EDIT.$item['user_id']?>" title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+			</td>
+		</tr>
+		<?php 
+			$i++;
+		}
+	}
+	?>
+	</tbody>
+</table>

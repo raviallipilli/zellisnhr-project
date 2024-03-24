@@ -1,0 +1,70 @@
+
+/* css for text success message */
+#message {
+    font-size: larger;
+	font-weight: bold;
+    background:rgba(205,206,255,0.1);
+}
+
+/* alert messages common css */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    }
+
+/* success message for saving and updating */
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    }
+
+/* info display message */
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+/* warnings display message */
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+/* danger display message */
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+/* auto-complete search */
+ul.typeahead li {
+    font-size: 14px;
+    padding-left: 237px;
+    font-weight: bold;
+    list-style-type: none;
+    }
+ul li {
+    margin: 10px 0;
+    }
+
+/* table scroll */
+.tablescroll-custom-scrollbar {
+    position: relative;
+    height: 700px;
+    width: 98%;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
+
+/* font icons */
+.fa {
+    font-size: 17px!important;
+}

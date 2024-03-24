@@ -1,0 +1,23 @@
+<h1> Register User</h1>
+<?php 
+		if ($status=='user_already_exists'){
+		echo "<div class='alert alert-success'><strong id='message'>User Already Exists!</strong></div>"; 
+		}
+?>
+<div class="row">
+	<div class="full">
+		<div class="box">
+			<h2>Sign up</h2>
+			<form action="/dashboard/register/register" method="post" name="edit" enctype='multipart/form-data' id="dashboard-form" class="form-validate">
+				<input type="hidden" name="do" value="register">
+
+				<?php echo $render->Render_form();?>
+
+				<div class="submit_but">
+					<button type="submit" id="submit" class="btn btn-primary btn-sm">Register</button>
+					<strong>Registered? </strong><a href="/dashboard/login" class="btn btn-primary btn-sm">Sign In</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
