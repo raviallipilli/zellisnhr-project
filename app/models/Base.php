@@ -79,6 +79,12 @@ class Base
 		return $data;
 	}
 
+	public function Insert($where = array(), $limit = null, $start = null, $select_cols = null)
+	{
+		$data = $this->__pdo->Insert($this->DBTable, $where, $limit, $start, $select_cols);
+		return $data;
+	}
+
 	public function Generate_sha1($primary_key_column = null, $primary_key_value = 0, $sha1_column = null)
 	{
 		//create an sha1

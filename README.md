@@ -14,6 +14,7 @@
 - User can access their profile or edit their info
 - User also has the ability to upload files, save/edit, also it is downloadable as well as has delete feature
 - the following file extensions are allowed .doc,.docx, .jpg, .jpeg, .csv, .pdf, .rtf
+- Password reset and recovery is included with phpmailer
 
 -----------------------------------------------------------------------------------------
 
@@ -29,6 +30,6 @@
 -----------------------------------------------------------------------------------------
 
 # development tools
-PHP with slim framework, Javascript, HTML, CSS
+PHP with slim framework, Javascript, HTML, CSS, PhpMailer
 
 -----------------------------------------------------------------------------------------

@@ -1,8 +1,9 @@
 <h1> Register User</h1>
 <?php 
-		if ($status=='user_already_exists'){
-		echo "<div class='alert alert-success'><strong id='message'>User Already Exists!</strong></div>"; 
-		}
+	if ($status=='user_already_exists')
+	{
+		echo "<div class='alert alert-success'><strong>User Already Exists!</strong></div>"; 
+	}
 ?>
 <div class="row">
 	<div class="full">
@@ -21,3 +22,6 @@
 		</div>
 	</div>
 </div>
+<script src="<?php echo RESOURCES_JS; ?>/dashboard/password.js?v=<?php echo date('YmdHis')?>"></script>	</head>
+
+	

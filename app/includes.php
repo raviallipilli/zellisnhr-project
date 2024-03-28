@@ -2,6 +2,7 @@
 require_once('config.php');
 
 require_once('functions/date.functions.php');
+require_once('functions/phpmailer.functions.php');
 
 // Models
 function my_autoloader($model)

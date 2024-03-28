@@ -216,7 +216,7 @@ class DB_PDO
 
 		// lets add our where clause if we have one
 		$where_string = '';
-		if(count($where) > 0) {
+		if(is_countable($where) > 0) {
 			// load each key value pair, and implode them with an AND
 			$where_array = array();
 			foreach($where as $key => $val) {

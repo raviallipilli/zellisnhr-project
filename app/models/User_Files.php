@@ -11,13 +11,15 @@ class User_Files extends Base
 	}
 
 	public function Get_all()
-	{	$sql= 'select 
+	{	
+		$sql= 'select u.email,
 		f.id,
 		f.title,
 		f.original_filename,
 		f.createdate 	
 		FROM '.$this->DBTable.' f 
-		where
+		left join users u on u.user_id = f.user_id
+		where f.user_id = '.$_SESSION['login_id'].' and
 		f.is_deleted = 0
 		order by f.title asc';
 		

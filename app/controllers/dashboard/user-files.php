@@ -20,7 +20,7 @@ switch($status)
 	case 'delete':
 		$f->Delete('id', $files_id);
 		header('location: '.PAGE_URL.$files_id.'?status=deleted');
-			exit;
+		exit;
 	break;
 }
 

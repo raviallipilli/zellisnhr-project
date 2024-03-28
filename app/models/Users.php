@@ -57,10 +57,8 @@ class Users
 
 		//the password field needs to be sha1
 		$params['password'] = sha1($params['password'].PASSWORD_SALT);
-		
-		$this->user_id = $this->__pdo->Insert(self::DBTable, $params);
 
-		//$this->__pdo->Optimize_table(self::DBTable);
+		$this->user_id = $this->__pdo->Insert(self::DBTable, $params);
 
 		//output the data that was inserted
 		$where['user_id'] = $this->user_id;
@@ -79,6 +77,7 @@ class Users
 		else
 		{
 			$params['password'] = sha1($params['password'].PASSWORD_SALT);
+
 		}
 		
 		$this->__pdo->Update(self::DBTable, $params, $where);
@@ -128,7 +127,6 @@ class Users
 	public function Auth_user($where = array())
 	{
 		$data = $this->__pdo->Select(self::DBTable, $where, null, null, $orderby);
-		print_r($data);
 		$data_count = count($data);
 		if($data_count > 0)
 		{

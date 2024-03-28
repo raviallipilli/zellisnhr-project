@@ -38,6 +38,7 @@ switch($do)
 			$params['original_filename'] = $request->post('original_filename');
 		}
 
+		$params['user_id'] = $_SESSION['login_id'];
 		//remove the do param from the array
 		unset($params['do']);
 		$update_close = $params['update_close'];

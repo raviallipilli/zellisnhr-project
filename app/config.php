@@ -46,4 +46,8 @@ DEFINE('PASSWORD_SALT', 15102014);
 DEFINE('FILES_STORE_ATTACHMENTS', './files-store/attachments');
 DEFINE('FILES_STORE_ATTACHMENTS_ABSOLUTE', '/files-store/attachments');
 
-
+//smtp details for php mailer
+DEFINE('ENABLE_EMAIL', true);
+DEFINE('SMTP_HOST', 'smtp.gmail.com');
+DEFINE('SMTP_USERNAME', 'luckyravi17@gmail.com');
+DEFINE('SMTP_PASSWORD', 'ccgs zubi ozgd bitz');

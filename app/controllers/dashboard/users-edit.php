@@ -26,25 +26,12 @@ switch($do)
 		$update_close = $params['update_close'];
 		unset($params['update_close']);
 
-		if($user_id == 0)
-		{
-			$data = $users->Save($params, 'user_id');
-			$user_id = $data[0]['user_id'];
-
-			//generate the sha1 value
-			$users->Generate_sha1('user_id', $user_id, 'user_sha1');
-		}
-		else
-		{
-			//push in the primary key into the array as a where array
-			$where = array();
-			$where['user_id'] = $user_id;
-			$data = $users->Update($params, $where);
-			$user_id = $data[0]['user_id'];
-
-			//generate the sha1 value
-			$users->Generate_sha1('user_id', $user_id, 'user_sha1');
-		}
+		//push in the primary key into the array as a where array
+		$where = array();
+		$where['user_id'] = $user_id;
+		$where['password'] = password_hash($params['password'], PASSWORD_DEFAULT);
+		$data = $users->Update($params, $where);
+		$user_id = $data[0]['user_id'];
 
 		if(isset($update_close))
 		{
@@ -66,7 +53,7 @@ $data = $data[0];
 $form_elements[] = array('type' => 'textbox', 'name' => 'firstname', 'value' => $data['firstname'], 'title' => 'Firstname', 'attributes' => array('required' => 'required'));
 $form_elements[] = array('type' => 'textbox', 'name' => 'lastname', 'value' => $data['lastname'], 'title' => 'Lastname', 'attributes' => array('required' => 'required'));
 $form_elements[] = array('type' => 'textbox', 'name' => 'email', 'value' => $data['email'], 'title' => 'Email', 'attributes' => array('required' => 'required'));
-$form_elements[] = array('type' => 'password', 'name' => 'password', 'value' => null, 'title' => 'Password');
+$form_elements[] = array('type' => 'password', 'name' => 'password', 'value' => null, 'title' => 'Password', 'attributes' => array('disabled' => 'disabled'));
 $form_elements[] = array('type' => 'textbox', 'name' => 'company', 'value' => $data['company'], 'title' => 'Company', 'attributes' => array('required' => 'required'));
 $form_elements[] = array('type' => 'textbox', 'name' => 'telephone', 'value' => $data['telephone'], 'title' => 'Telephone');
 

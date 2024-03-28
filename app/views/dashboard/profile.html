@@ -1,5 +1,4 @@
 <h1>User - profile</h1>
-
 <div class="row">
     <section class="quarter">
     	<div class="box-border">
@@ -13,8 +12,8 @@
     <section class="threequarters">
     	<div class="box-border">
     		<h2><?php echo $data['firstname']." ".$data['lastname']?></h2>
-	        <form action="<?php echo PAGE_URL_EDIT?>" method="post" name="edit" class="modal_edit" enctype='multipart/form-data'>
-	            <input type="hidden" name="do" value="edit">
+	        <form action="<?php echo PAGE_URL;?>" method="post" name="view" class="modal_edit" enctype='multipart/form-data'>
+	            <input type="hidden" name="do" value="view">
 	            <?php echo $render->Render_form();?>
 	        </form>
 			<a href="/dashboard/users" class="button">Go Back</a>
