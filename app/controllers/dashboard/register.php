@@ -48,6 +48,7 @@ $form_elements[] = array('type' => 'textbox', 'name' => 'firstname', 'value' => 
 $form_elements[] = array('type' => 'textbox', 'name' => 'lastname', 'value' => $data['lastname'], 'title' => 'Lastname', 'attributes' => array('required' => 'required'));
 $form_elements[] = array('type' => 'textbox', 'name' => 'email', 'value' => $data['email'], 'title' => 'Email', 'attributes' => array('required' => 'required'));
 $form_elements[] = array('type' => 'password', 'name' => 'password', 'value' => null, 'title' => 'Password', 'attributes' => array('required' => 'required'), 'pattern' => '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}');
+$form_elements[] = array('type' => 'password', 'name' => 'confirm-password', 'value' => null, 'title' => 'Confirm Password', 'attributes' => array('required' => 'required'), 'pattern' => '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}');
 $form_elements[] = array('type' => 'textbox', 'name' => 'company', 'value' => $data['company'], 'title' => 'Company');
 $form_elements[] = array('type' => 'textbox', 'name' => 'telephone', 'value' => $data['telephone'], 'title' => 'Telephone');
 

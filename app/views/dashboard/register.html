@@ -4,6 +4,14 @@
 	{
 		echo "<div class='alert alert-success'><strong>User Already Exists!</strong></div>"; 
 	}
+	if ($status=='error')
+    {
+		echo "<div><strong>Password do not match, both password should be same.!</strong></div>"; 
+	}
+    if ($status=='empty')
+    {
+      echo "<div><strong>Password is empty!</strong></div>"; 
+    }
 ?>
 <div class="row">
 	<div class="full">

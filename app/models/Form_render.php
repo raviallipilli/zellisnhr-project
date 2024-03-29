@@ -39,7 +39,7 @@ class Form_render
 							<label for=\"".$elements['name']."\">\n
 								<span>".$elements['title']."</span>\n
 								<input type=\"".$elements['type']."\" name=\"".$elements['name']."\" id=\"".$elements['name']."\" value=\"".$elements['value']."\" style=\"".$elements['style']."\" ".$attributes." pattern=".$elements['pattern'].">\n
-								<div id=\"message\" style=\"text-align:center\">
+								<div id=\"message\">
 								<h3>Password must contain the following:</h3>
 								<p id=\"letter\" class=\"invalid\">A <b>lowercase</b> letter</p>
 								<p id=\"capital\" class=\"invalid\">A <b>capital (uppercase)</b> letter</p>

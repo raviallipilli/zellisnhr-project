@@ -108,13 +108,13 @@ nav {
         background: #f1f1f1;
         color: #000;
         position: relative;
-        padding: 15px;
-        margin-top: 5px;
-      }
+        width: 590px; 
+        margin: 0 auto      }
       
       #message p {
-        padding: 10px 25px;
-        font-size: 14px;
+        padding: 5px 10px;
+        font-size: 12px;
+        margin: -5px 0!important;
       }
       
       /* Add a green text color and a checkmark when the requirements are right */
