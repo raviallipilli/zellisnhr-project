@@ -40,7 +40,7 @@ class Users
 		$this->lastname = null;
 		$this->email = null;
 		$this->password = null;
-		$rhis->telephone = null;
+		$this->telephone = null;
 		$this->last_login = date('Y-m-d H:i:s');
 		$this->createdate = date('Y-m-d H:i:s');
 		$this->updatedate = date('Y-m-d H:i:s');
